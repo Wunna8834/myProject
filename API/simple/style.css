@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.results{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.result img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+button {
+	cursor: pointer;
+	border: 0;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 18px;
+	padding: 10px;
+	margin: 10px;
+	width: 300px;
+}
+
+#cat_btn{
+    background-color: #4D96FF;
+}
+#dog_btn{
+     background-color: #FF6B6B;
+}
+#cat_btn:hover,#dog_btn:hover{
+    background-color: #6BCB77;
+}
+button:active {
+	transform: scale(0.98);
+}
+
+button:focus {
+	outline: none
+}

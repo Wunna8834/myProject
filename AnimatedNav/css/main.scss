@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+    height: 100vh;
+    background: rgb(61, 64, 70);
+    color: white;
+    display: grid;
+    place-content: center;
+}
+
+header{
+    display: flex;
+
+    .activator{
+        padding: 1.1em;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+}
+img{
+    width: 100%;
+    max-width: 45px;
+    color: white;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background: rgb(26, 30, 37);
+    border-radius: 0 5em 5em 0;
+    padding: .5em;
+    clip-path: ellipse(50% 50% at -50% 50%);
+    
+    ul{
+        display: flex;
+       
+       
+        li a{
+            display: block;
+            padding: .5em;
+            margin: 0 .5em;
+            border-radius: 50%;
+            transition: background-color .3s;
+
+            &:hover{
+                background: rgb(43, 48, 58);
+            }
+
+            img{
+                opacity: 0;
+                transform: translateX(-10px);
+            }
+        }
+    }
+}

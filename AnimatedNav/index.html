@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Animated Nav</title>
+</head>
+<body>
+    
+<header>
+    <img class="activator" id="activator" src="https://s2.svgbox.net/hero-outline.svg?ic=menu-alt-1&color=f0f3f4" width="32" height="32">
+    <nav>
+        <ul>
+            <li><a href=""><img src="https://s2.svgbox.net/hero-outline.svg?ic=home&color=8727aa" width="32" height="32"></a></li>
+            <li><a href=""><img src="https://s2.svgbox.net/hero-outline.svg?ic=cog&color=8727aa" width="32" height="32"></a></li>
+            <li><a href=""><img src="https://s2.svgbox.net/hero-outline.svg?ic=user-circle&color=8727aa" width="32" height="32"></a></li>
+            <li><a href=""><img src="https://s2.svgbox.net/hero-outline.svg?ic=search-circle&color=8727aa" width="32" height="32"></a></li>
+            <li><a href=""><img src="https://s2.svgbox.net/hero-outline.svg?ic=logout&color=8727aa" width="32" height="32"></a></li>
+           
+        </ul>
+    </nav>
+</header>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/CSSRulePlugin.min.js" integrity="sha512-Aa3UvVB5yhH/dNXMt8nGZDD15Xmntq1ODcavfgT8omSLaomrJKYybWczzc6UJYDUAdqR1hmDJ47V4Ux50PPIuw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    const card = document.getElementById("activator");
+
+    const tl = gsap.timeline({default: {ease: "power2.inOut"}});
+    var toggle = false;
+
+    tl.to('.activator', {
+        background: '#805ad5',
+        'borderRadius': '3em 0 0 3em'
+    });
+    tl.to('nav', {
+        'clipPath': 'ellipse(100% 100% at 50% 50%)'
+    }, "-=.5")
+    tl.to('nav img', {
+        opacity: 1,
+        transform: 'translateX(0)',
+        stagger: .07
+    }, "-=.5")
+    tl.pause();
+
+    card.addEventListener("click", () => {
+        toggle = !toggle;
+        if(toggle ? tl.play() : tl.reverse());
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>WdebpageDesign</title>
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <img src="images/logo.png" class="logo" alt="logoImage">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">Services</a></li>
+            </ul>
+            <img src="images/menu.png" class="menu-icon" alt="menubar">
+        </nav>
+
+        <div class="text-box">
+            <h1>I'm <span class="auto-input"></span></h1>
+            <p>You can reach out to me if you need any help in making a <br>website for you or your business.</p>
+            <a href="">Contact Me</a>
+            <a href="" class="yellow">Download CV</a>
+        </div>
+
+        <img src="images/user.png" class="user" alt="userimg">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".auto-input", {
+            strings: ["Anna Amelia","Web Developer", "UI Designer"],
+            typeSpeed:100,
+            backSpeed:100,
+            loop:true
+        })
+    </script>
+</body>
+</html>

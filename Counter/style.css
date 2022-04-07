@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+
+
+.container{
+    text-align: center;
+    margin-top: 15%;
+    line-height: 2.7rem;
+}
+
+.container h1 {
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-size: 3rem;
+    color: 	#800000;
+}
+
+#value {
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color: blue;
+    font-size: 5rem;
+}
+
+button {
+    margin: .5rem;
+    border-radius: 6px;
+    background-color: 	#696969;
+    color: 	#7FFFD4;
+    box-shadow: 3px 5px 15px #a9a9a9;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Mochiy Pop P One', sans-serif;  
+    
+}
+
+button:hover {
+    background-color: crimson;
+    width: 100px;
+    height: 25px;
+    color: ivory;
+   
+}

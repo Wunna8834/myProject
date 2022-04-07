@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8889c8a609.js" crossorigin="anonymous"></script>
+    <title>Carousel</title>
+</head>
+<body>
+    <h1 class="title">Sayar Gyi Myrr</h1>
+    <div class="container" id="glass">
+        <div class="img-container">
+            <img class="person" src="me.jpg" id="person-img" alt="">
+        </div>
+
+        <div class="information">
+            <div class="btn-container">
+                <button class="prev-btn" id="prev-btn"> <i class="fa-solid fa-circle-arrow-left"></i></button>
+            </div>
+            <div class="info">
+                <!-- <p id="name">Wunna Aung</p>
+                <p id="age">23</p>
+                <p id="edu">Under Gratitude</p>
+                <p id="skill">Swel Sone Kyan</p> -->
+                <p>Name: <span class="data" id="name">Wunna Aung</span></p>
+                <p>Age: <span class="data" id="age">23</span></p>
+                <p>Education: <span class="data" id="edu">Under Gratitude</span></p>
+                <p>Skill: <span class="data" id="skill">Swel Sone Kyan</span></p>
+            </div>
+            <div class="btn-container">
+               <button class="next-btn" id="next-btn"> <i class="fa-solid fa-circle-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <div class="about">
+            <p id="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur labore nisi officia velit molestiae nobis, ullam placeat a obcaecati praesentium!</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        var glass = document.getElementById("glass");
+        var title = document.querySelector(".title");
+        const tl = gsap.timeline({defaults: {ease: "power2.inOut", duration: 1.5}});
+
+        tl.from('img', {y: '-50%', delay: .5, opacity:0})
+          .from('h1', {y: '-100%', opacity:0, delay:.3,  duration: 0.5}, "-=1.7")
+          .from('.container', {opacity:0, delay: .5, duration: 1.7}, "-=1.5")
+          
+    </script>
+</body>
+</html>

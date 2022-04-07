@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #42C2FF;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header{
+    background-color: #FF7F42;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+header a{
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    letter-spacing: 0.7em;
+    color: #ac3866;
+    text-decoration: none;
+}
+.search{
+    padding: .5rem 1rem;
+    border: 2px solid #E6D5B8;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 2px solid #22254b;
+    width: 15vw;
+    color: white;
+}
+.search::placeholder{
+    color: #470D21;
+}
+.search:focus{
+    background-color: #E45826;
+    outline: none;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.movie{
+    border-radius: 3px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    background-color: #B8FFF9;
+    margin: 1rem auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.movie img{
+    width: 100%;
+}
+
+.movie-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 1px;
+}
+
+.movie-info h3{
+    margin: 0;
+}
+
+.movie-info span{
+    background-color: #EFFFFD;
+    border-radius: 3px;
+    padding: 0.25rem 0.5rem;
+    font-weight: bold;
+}
+
+.movie-info span.green{
+    color: #1E5128;
+}
+.movie-info span.orange{
+    color: #cf7f0b;
+}
+.movie-info span.red{
+    color: #e62411;
+}
+.overview{
+    position: absolute;
+    padding: 2rem;
+    height: 300px;
+    width: 100%;
+    overflow: auto;
+    border-radius: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255, 0.2);
+    backdrop-filter: blur(20px);
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in;
+}
+.overview h3{
+    margin-top: 0;
+}
+.movie:hover .overview{
+    transform: translateX(0);
+}

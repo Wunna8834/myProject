@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Testing</title>
+</head>
+<body>
+    <img src="spring.jpg" alt="spring-revolution-img">
+
+    <div class="circle"></div>
+
+    <div class="container" id="glass">
+        <h2 class="seq">Fuck Military</h2>
+        <p class="seq">Let's fight together and we must win</p>
+    </div>
+
+    <h1><span style="color: #aa0707;z-index: 2;">VIVA</span> LA REVOLUTION</h1>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        const glass = document.getElementById("glass");
+
+        const tl = gsap.timeline({defaults: {ease: "power2.inOut", duration: 1.5}});
+
+        tl.from('img', {x: '-10%', opacity: 0})
+          .from('.container', {opacity:0, delay: .5, duration: 1}, "-=1.5")
+          .from('.container', {x: '-20%', backdropFilter: 'blur(0px)'})
+          .from('.seq', { y: -30, opacity: 0, stagger: .2, duration: .5}, "-=.5")
+          .from('h1', { y: 20, clipPath: 'inset(0 0 100% 0)'}, "-=.8")
+          
+          
+    </script>
+</body>
+</html>

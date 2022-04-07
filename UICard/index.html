@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>UI_Card</title>
+</head>
+<body>
+    <div class="card" id="card">
+        <h1>MA A LOE ?</h1>
+        <p>MIN AUNG HLAING ?</p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/CSSRulePlugin.min.js" integrity="sha512-Aa3UvVB5yhH/dNXMt8nGZDD15Xmntq1ODcavfgT8omSLaomrJKYybWczzc6UJYDUAdqR1hmDJ47V4Ux50PPIuw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+
+        var card = document.getElementById("card");
+        var rule = CSSRulePlugin.getRule(".card::before");
+        var rule2 = CSSRulePlugin.getRule(".card::after");
+        var tl = gsap.timeline({defaule: {ease: "power2.inOut"}});
+
+        tl.to(rule, {
+            width: '100%'
+        })
+        tl.to(rule2, {
+            width: '100%'
+        }, "-= .3")
+        tl.to('h1', {
+            color: 'white',
+            'fontSize': '0.9em'
+        }, "-= .7")
+        tl.to('p', {
+            'clipPath': 'circle(140% at 0% 100%)',
+            'transform': 'translateX(0)',
+            'fontSize': '32px',
+            
+        }, "-= .3")
+        tl.pause();
+        card.addEventListener('mouseenter', () => {
+            tl.play();
+        })
+        card.addEventListener('mouseleave', () => {
+            tl.reverse();
+        })
+    </script>
+</body>
+</html>
